@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-01-25T13:02:56.684Z</updated>
+    <updated>2021-01-25T15:11:18.841Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -37,7 +37,19 @@ id选择器<br>
 相邻兄弟选择器<br>
 伪类<br>
 伪元素<br>
-通用选择器</p>
+通用选择器<br>
+<strong>CSS文本属性</strong><br>
+CSS文本属性课定义文本的外观，通过文本属性，可以改变文本的颜色、字符间距，对齐文本，装饰文本，对文本进行缩进等。<br>
+<strong>文本颜色color：</strong><br>
+设置文本颜色<br>
+color_name规定颜色值为颜色名称的颜色（如red）<br>
+hex_number 规定颜色值为十六进制的颜色<br>
+rgb_number规定颜色值为rgb的颜色（如rgb(255,0,0））<br>
+<strong>行间距line-height</strong><br>
+设置行间距离<br>
+不允许使用负值<br>
+单行文字可实现元素的垂直居中<br>
+默认继承父元素line-height</p>
 ]]></content>
     </entry>
     <entry>
