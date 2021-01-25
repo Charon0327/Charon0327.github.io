@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-01-25T06:14:28.205Z</updated>
+    <updated>2021-01-25T06:45:41.077Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -18,7 +18,7 @@
         <updated>2021-01-25T04:31:08.000Z</updated>
         <content type="html"><![CDATA[<p><strong>HTML基本结构</strong><br>
 &lt;!doctype html&gt;文档声明，此类为H5文档声明<br>
-meta包含了页面的隐式信息<br>
+&lt; meta&gt;包含了页面的隐式信息<br>
 某些元素具有空内容，空元素在开始标签内进行关闭。<br>
 <strong>HTML属性</strong><br>
 属性总是在HTML元素的开始标签中设置<br>
@@ -54,10 +54,16 @@ target属性固打开方式 target='_blank'（新窗口下打开）<br>
 绝对路径：从盘符开始的路径<br>
 往上一级查找方式../文件夹/文件名<br>
 同级查找方式：文件夹/文件名<br>
-本地锚点跳转：《a href=&quot;#id值&quot;》 《p id=&quot;值&quot;》《/p》<br>
+本地锚点跳转：&lt; a href=&quot;#id值&quot;&gt; &lt; p id=&quot;值&quot;&gt;&lt; /p&gt;<br>
 <strong>图片标签</strong><br>
-《img src=&quot;地址&quot;》通过此标签，可向页面内引入图片<br>
-src属性为文件的路径，alt属性为图片由于某种原因无法展示的时候显示的信息</p>
+&lt; img src=&quot;地址&quot;&gt; 通过此标签，可向页面内引入图片<br>
+src属性为文件的路径，alt属性为图片由于某种原因无法展示的时候显示的信息<br>
+<strong>表单</strong><br>
+用于搜集不同类型的用户数据<br>
+表单就是一个包含表单元素的区域&lt; form&gt;表单元素N个&lt;/ form &gt;<br>
+表单元素是允许用户在表单中（比如文本域，下拉列表，单选框，复选框等）<br>
+输入信息的元素，以及文本标签<br>
+表单使用表单标签定义&lt; from&gt;</p>
 ]]></content>
     </entry>
 </feed>
