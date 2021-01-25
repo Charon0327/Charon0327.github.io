@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-01-25T04:34:01.936Z</updated>
+    <updated>2021-01-25T06:14:28.205Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -16,7 +16,48 @@
         <link href="https://Charon0327.github.io/post/html-ji-chu/">
         </link>
         <updated>2021-01-25T04:31:08.000Z</updated>
-        <content type="html"><![CDATA[<p>某些元素具有空内容，空元素在开始标签内进行关闭。</p>
+        <content type="html"><![CDATA[<p><strong>HTML基本结构</strong><br>
+&lt;!doctype html&gt;文档声明，此类为H5文档声明<br>
+meta包含了页面的隐式信息<br>
+某些元素具有空内容，空元素在开始标签内进行关闭。<br>
+<strong>HTML属性</strong><br>
+属性总是在HTML元素的开始标签中设置<br>
+属性总是以名称/值对的形式出现<br>
+始终属性值加引号<br>
+常用属性：id class title  style href src align<br>
+<strong>文本标签</strong><br>
+h1-h6标签可定义标题。h1最大，h6最小<br>
+p标签定义段落<br>
+b标签规定粗体文本<br>
+u标签为文本添加下划线<br>
+s标签克定义加删除线文本定义<br>
+br可插入一个简单的换行符<br>
+hr&gt;标签在HTML页面中创建一条水平线<br>
+i标签规定斜体文本<br>
+<strong>列表标签</strong><br>
+ol定义有序列表，常用属性：start规定列表起始位置<br>
+ul定义无序列表<br>
+li定义列表项目<br>
+dl定义了定义列表，用于结合<dt><br>
+dt定义了定义列表中的项目<br>
+dd在定义列表中定义条目的定义部分<br>
+<strong>快捷方式</strong><br>
+ol&gt;li{列表$}*4<br>
+<strong>超级链接</strong><br>
+a来设置超文本链接<br>
+鼠标移动到链接上，鼠标默认会变为一只小手，链接文本默认带有下划线<br>
+herf属性指定跳转地址 href=&quot;&quot;<br>
+target属性固打开方式 target='_blank'（新窗口下打开）<br>
+支持相对路径与绝对路径的跳转<br>
+<strong>链接跳转</strong><br>
+相对路径：相对于当前文档路径进行跳转<br>
+绝对路径：从盘符开始的路径<br>
+往上一级查找方式../文件夹/文件名<br>
+同级查找方式：文件夹/文件名<br>
+本地锚点跳转：《a href=&quot;#id值&quot;》 《p id=&quot;值&quot;》《/p》<br>
+<strong>图片标签</strong><br>
+《img src=&quot;地址&quot;》通过此标签，可向页面内引入图片<br>
+src属性为文件的路径，alt属性为图片由于某种原因无法展示的时候显示的信息</p>
 ]]></content>
     </entry>
 </feed>
