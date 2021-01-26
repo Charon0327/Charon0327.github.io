@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-01-26T09:53:09.254Z</updated>
+    <updated>2021-01-26T10:43:56.815Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://Charon0327.github.io/images/avatar.png</logo>
     <icon>https://Charon0327.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[CSS盒模型解析/浮动]]></title>
+        <id>https://Charon0327.github.io/post/css-he-mo-xing-jie-xi-fu-dong/</id>
+        <link href="https://Charon0327.github.io/post/css-he-mo-xing-jie-xi-fu-dong/">
+        </link>
+        <updated>2021-01-26T09:53:22.000Z</updated>
+        <content type="html"><![CDATA[<p>CSS盒模型规定了处理元素的内容、内边距、边框和外边距的方式。<br>
+一切皆为盒子，div，h1，或p元素常常被称为块级元素，意味着这些元素盒子显示为块盒子，span和input等元素称为“行内元素”。<br>
+<strong>### 块级元素与行内元素区别</strong><br>
+1.块级元素可设置宽高，行内元素宽高由元素内容决定。<br>
+2.块级元素可设置垂直方向的内外边距，行内元素无法设置垂直的内外边距。<br>
+3.块级元素默认显示方式占满整行，相邻的行内元素默认在同一行显示。<br>
+4.通过display属性值进行元素显示方式的更改。</p>
+<h3 id="盒子类型的相互转换">盒子类型的相互转换</h3>
+<p>块级盒子与行内盒子之间通过display值可进行相互的盒子显示方式转换</p>
+<h5 id="常用的display值">常用的display值</h5>
+<p>块级盒子默认 display:block; 转换操作 display:inline-block; display:inline;<br>
+行内盒子默认 display:inline; 转换操作 display:inline-block; display:block;<br>
+行内块盒子默认  display:inline-block;  转换操作 display:block;  display:inline;</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSS基础]]></title>
         <id>https://Charon0327.github.io/post/css-ji-chu/</id>
