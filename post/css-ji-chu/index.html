@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSS基础 | Gridea</title>
-<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1611587472150">
+<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1611654753950">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="CSS基础 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
@@ -25,7 +25,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://Charon0327.github.io">
-  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1611587472150" alt="">
+  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1611654753950" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -85,7 +85,7 @@
                 2021-01-25
               </span>
               <span>
-                2 min read
+                5 min read
               </span>
               
                 <a href="https://Charon0327.github.io/tag/bEF-XKIE8/" class="post-tag">
@@ -118,22 +118,252 @@ id选择器<br>
 伪类<br>
 伪元素<br>
 通用选择器<br>
-<strong>CSS文本属性</strong><br>
-CSS文本属性课定义文本的外观，通过文本属性，可以改变文本的颜色、字符间距，对齐文本，装饰文本，对文本进行缩进等。<br>
-<strong>文本颜色color：</strong><br>
-设置文本颜色<br>
-color_name规定颜色值为颜色名称的颜色（如red）<br>
-hex_number 规定颜色值为十六进制的颜色<br>
-rgb_number规定颜色值为rgb的颜色（如rgb(255,0,0））<br>
-<strong>行间距line-height</strong><br>
-设置行间距离<br>
-不允许使用负值<br>
-单行文字可实现元素的垂直居中<br>
-默认继承父元素line-height</p>
+<strong>## CSS文本属性</strong><br>
+CSS文本属性课定义文本的外观，通过文本属性，可以改变文本的颜色、字符间距，对齐文本，装饰文本，对文本进行缩进等。</p>
+<h3 id="文本颜色color">文本颜色color</h3>
+<p>            设置文本颜色<br>
+           color_name规定颜色值为颜色名称的颜色（如red）<br>
+          hex_number 规定颜色值为十六进制的颜色<br>
+          rgb_number规定颜色值为rgb的颜色（如rgb(255,0,0））</p>
+<h3 id="行间距line-height">行间距line-height</h3>
+<p>           设置行间距离<br>
+           不允许使用负值<br>
+          单行文字可实现元素的垂直居中<br>
+          默认继承父元素line-height</p>
+<h3 id="文本缩进text-indent">文本缩进text-indent</h3>
+<p>所有元素的第一行都可以缩进一个给定的长度，甚至该长度可以是负值。<br>
+可以为所有块级元素应用text-indent，但无法将该属性应用于行内元素。<br>
+使用负值<br>
+使用百分比<br>
+text-indent属性可以继承</p>
+<h3 id="文本对齐text-align">文本对齐text-align</h3>
+<p>它会影响一个元素中的文本行互相之间的对齐方式<br>
+值left、right和center会导致元素中的文本分别左对齐、右对齐和居中。</p>
+<h3 id="文本修饰text-decoration">文本修饰text-decoration</h3>
+<p>主要设定文本划线的属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">none</td>
+<td style="text-align:center">无</td>
+</tr>
+<tr>
+<td style="text-align:center">underline</td>
+<td style="text-align:center">下划线</td>
+</tr>
+<tr>
+<td style="text-align:center">overline</td>
+<td style="text-align:center">上划线</td>
+</tr>
+<tr>
+<td style="text-align:center">line-through</td>
+<td style="text-align:center">当中下划线</td>
+</tr>
+</tbody>
+</table>
+<h3 id="字间隔word-spacing">字间隔word-spacing</h3>
+<p>可以改变字（单词）之间的标准间隔，默认值normal与设置值为0是一样的<br>
+属性接受一个正长度值或负长度值。如果提供一个正长度值，字之间的间隔会增加。为word-spacing设置一个负值，会把它拉近。</p>
+<h3 id="字母间隔letter-spacing">字母间隔letter-spacing</h3>
+<p>字母间隔修改的是字符或字母之间的间隔<br>
+letter-spacing属性的可取值包括所有长度。默认关键字为normal</p>
+<h3 id="字符转换text-transform">字符转换text-transform</h3>
+<p>用于处理文本大小写</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">none</td>
+<td style="text-align:center">文本正常显示</td>
+</tr>
+<tr>
+<td style="text-align:center">uppercase</td>
+<td style="text-align:center">文本全部转换为大写</td>
+</tr>
+<tr>
+<td style="text-align:center">lowercase</td>
+<td style="text-align:center">文本全部转换为小写</td>
+</tr>
+<tr>
+<td style="text-align:center">capitalize</td>
+<td style="text-align:center">首字母大写</td>
+</tr>
+</tbody>
+</table>
+<h3 id="处理空白符white-space">处理空白符white-space</h3>
+<p>清除源文档中的字符空格，包括换行<br>
+默认属性值：normal<br>
+禁止换行：nowrap</p>
+<h2 id="css字体属性"><strong>CSS字体属性</strong></h2>
+<h4 id="字体变形font-variant">字体变形font-variant</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">normal</td>
+<td style="text-align:center">默认值。标准字体</td>
+</tr>
+<tr>
+<td style="text-align:center">small-caps</td>
+<td style="text-align:center">浏览器会显示小型大写字母的字体</td>
+</tr>
+<tr>
+<td style="text-align:center">inherit</td>
+<td style="text-align:center">规定应该从父元素继承font-variant属性的值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="字体风格font-style">字体风格font-style</h3>
+<p>最常用于规定斜体文本</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">normal</td>
+<td style="text-align:center">文本正常显示</td>
+</tr>
+<tr>
+<td style="text-align:center">italic</td>
+<td style="text-align:center">文本斜体显示</td>
+</tr>
+<tr>
+<td style="text-align:center">oblique</td>
+<td style="text-align:center">文本倾斜显示</td>
+</tr>
+</tbody>
+</table>
+<h3 id="指定字体font-family">指定字体font-family</h3>
+<p>定义文本的字体系列</p>
+<h3 id="字体加粗font-weight">字体加粗font-weight</h3>
+<p>使用bold将文本字体加粗<br>
+关键字100~900为字体指定了9级加粗度，数字400等价于normal，700等价于bold</p>
+<h2 id="css-链接">CSS 链接</h2>
+<p>链接的四种状态</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a:link</td>
+<td style="text-align:center">普通的、未被访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:center">a:visited</td>
+<td style="text-align:center">用户已访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:center">a:hover</td>
+<td style="text-align:center">鼠标指针位于链接的上方</td>
+</tr>
+<tr>
+<td style="text-align:center">a:active</td>
+<td style="text-align:center">链接被点击的时刻</td>
+</tr>
+</tbody>
+</table>
+<p>为链接的不同状态设置样式时，按照以下次序规则：<br>
+a:hover必须位于a:link和a:visited之后<br>
+a:active必须位于a:hover之后</p>
+<h2 id="css列表">CSS列表</h2>
+<p>要修改列表项的标志类型，可以使用属性list-style-type:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">square</td>
+<td style="text-align:center">以方形的形式显示</td>
+</tr>
+<tr>
+<td style="text-align:center">circle</td>
+<td style="text-align:center">以圆圈的形式显示</td>
+</tr>
+<tr>
+<td style="text-align:center">upper-roman</td>
+<td style="text-align:center">大写罗马数字</td>
+</tr>
+<tr>
+<td style="text-align:center">lower-alpha</td>
+<td style="text-align:center">小写英文字母</td>
+</tr>
+</tbody>
+</table>
+<h2 id="css表格">CSS表格</h2>
+<p>表格边框：border属性<br>
+折叠边框：border-collapse<br>
+表格宽度高度：width/height<br>
+表格文本对齐：text-align/vertical-align</p>
+<h2 id="css背景">CSS背景</h2>
+<p>background-color<br>
+background-image无法实现继承<br>
+background-image （no-repeat/repeat-x/repeat-y）在页面上对背景图像进行平铺<br>
+background-position设置背景图像的起始位置<br>
+background-attachment声明图像相对于可视区是固定的(fixed)，不会受到滚动的影响</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2color">文本颜色color</a></li>
+<li><a href="#%E8%A1%8C%E9%97%B4%E8%B7%9Dline-height">行间距line-height</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC%E7%BC%A9%E8%BF%9Btext-indent">文本缩进text-indent</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90text-align">文本对齐text-align</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC%E4%BF%AE%E9%A5%B0text-decoration">文本修饰text-decoration</a></li>
+<li><a href="#%E5%AD%97%E9%97%B4%E9%9A%94word-spacing">字间隔word-spacing</a></li>
+<li><a href="#%E5%AD%97%E6%AF%8D%E9%97%B4%E9%9A%94letter-spacing">字母间隔letter-spacing</a></li>
+<li><a href="#%E5%AD%97%E7%AC%A6%E8%BD%AC%E6%8D%A2text-transform">字符转换text-transform</a></li>
+<li><a href="#%E5%A4%84%E7%90%86%E7%A9%BA%E7%99%BD%E7%AC%A6white-space">处理空白符white-space</a></li>
+</ul>
+</li>
+<li><a href="#css%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><strong>CSS字体属性</strong></a><br>
+*
+<ul>
+<li><a href="#%E5%AD%97%E4%BD%93%E5%8F%98%E5%BD%A2font-variant">字体变形font-variant</a></li>
+<li><a href="#%E5%AD%97%E4%BD%93%E9%A3%8E%E6%A0%BCfont-style">字体风格font-style</a></li>
+<li><a href="#%E6%8C%87%E5%AE%9A%E5%AD%97%E4%BD%93font-family">指定字体font-family</a></li>
+<li><a href="#%E5%AD%97%E4%BD%93%E5%8A%A0%E7%B2%97font-weight">字体加粗font-weight</a></li>
+</ul>
+</li>
+<li><a href="#css-%E9%93%BE%E6%8E%A5">CSS 链接</a></li>
+<li><a href="#css%E5%88%97%E8%A1%A8">CSS列表</a></li>
+<li><a href="#css%E8%A1%A8%E6%A0%BC">CSS表格</a></li>
+<li><a href="#css%E8%83%8C%E6%99%AF">CSS背景</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
