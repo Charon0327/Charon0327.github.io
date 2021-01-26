@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSS盒子模型 | Gridea</title>
-<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1611662616272">
+<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1611669081680">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="CSS盒子模型 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
@@ -13,8 +13,8 @@
 
     <meta name="description" content="CSS盒模型规定了处理元素的内容、内边距、边框和外边距的方式。
 一切皆为盒子，div，h1，或p元素常常被称为块级元素，意味着这些元素盒子显示为块盒子，span和input等元素称为“行内元素”。
-### 块级元素与行内元素区别
-1.块级元..." />
+块级元素与行内元素区别
+1.块级元素可设置..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://Charon0327.github.io">
-  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1611662616272" alt="">
+  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1611669081680" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -84,7 +84,7 @@
                 2021-01-26
               </span>
               <span>
-                2 min read
+                3 min read
               </span>
               
             </div>
@@ -92,9 +92,9 @@
             <div class="post-content-wrapper">
               <div class="post-content">
                 <p>CSS盒模型规定了处理元素的内容、内边距、边框和外边距的方式。<br>
-一切皆为盒子，div，h1，或p元素常常被称为块级元素，意味着这些元素盒子显示为块盒子，span和input等元素称为“行内元素”。<br>
-<strong>### 块级元素与行内元素区别</strong><br>
-1.块级元素可设置宽高，行内元素宽高由元素内容决定。<br>
+一切皆为盒子，div，h1，或p元素常常被称为块级元素，意味着这些元素盒子显示为块盒子，span和input等元素称为“行内元素”。</p>
+<h3 id="块级元素与行内元素区别">块级元素与行内元素区别</h3>
+<p>1.块级元素可设置宽高，行内元素宽高由元素内容决定。<br>
 2.块级元素可设置垂直方向的内外边距，行内元素无法设置垂直的内外边距。<br>
 3.块级元素默认显示方式占满整行，相邻的行内元素默认在同一行显示。<br>
 4.通过display属性值进行元素显示方式的更改。</p>
@@ -108,11 +108,11 @@
 padding属性规定了盒子的内边距<br>
 border属性规定了盒子的边框<br>
 margin属性规定了盒子的外边距<br>
-####内边距padding<br>
+###内边距padding<br>
 padding属性接受长度值或百分比值，但不允许使用负值。<br>
 两个值时：上下 左右<br>
 三个值：上 左右 下<br>
-####边框border<br>
+###边框border<br>
 元素的边框是围绕元素内容和边距的一条或多条线。border允许规定元素边框的样式，宽度和颜色。<br>
 #####border-style边框样式<br>
 常用属性：dotted, dahed,solid,double<br>
@@ -126,6 +126,21 @@ padding属性接受长度值或百分比值，但不允许使用负值。<br>
 <h5 id="border-color">border-color</h5>
 <p>边框颜色透明：border-color:transparent；<br>
 border:1px solid #eee;</p>
+<h3 id="外边距margin">外边距margin</h3>
+<p>margin属性接受任何长度单位，百分值，甚至负值。<br>
+有固定的的宽度块元素的水平居中，可以使用margin：*px auto的方式。</p>
+<h2 id="css浮动">CSS浮动</h2>
+<p>浮动元素取值：float:left/rigt/none<br>
+浮动元素适用于任何元素（行内元素，块元素）<br>
+浮动元素会默认水平排列，如果超出父元素的默认宽度，会自动跳转到下一行。<br>
+浮动元素会脱离文档流，显示方式为仅靠近父元素的左边缘，或者之前有浮动的元素的边缘位置<br>
+浮动的元素直接的父元素在 没有设置高度的情况下高度会丢失。</p>
+<h3 id="css清除浮动方法">CSS清除浮动方法</h3>
+<p>1.空标签清除浮动<br>
+   &lt; div style=&quot;clear:both;&quot;&gt;&lt; /div&gt;<br>
+2.利用伪类元素清除浮动<br>
+  after{ content:&quot;&quot;; display:block; clear:both}<br>
+3.触发父级元素BFC模式进行浮动的清除 overflow:hidden;</p>
 
               </div>
               <div class="toc-container">
@@ -134,6 +149,7 @@ border:1px solid #eee;</p>
 <ul>
 <li>
 <ul>
+<li><a href="#%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%8C%BA%E5%88%AB">块级元素与行内元素区别</a></li>
 <li><a href="#%E7%9B%92%E5%AD%90%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2">盒子类型的相互转换</a><br>
 *
 <ul>
@@ -142,6 +158,12 @@ border:1px solid #eee;</p>
 <li><a href="#border-color">border-color</a></li>
 </ul>
 </li>
+<li><a href="#%E5%A4%96%E8%BE%B9%E8%B7%9Dmargin">外边距margin</a></li>
+</ul>
+</li>
+<li><a href="#css%E6%B5%AE%E5%8A%A8">CSS浮动</a>
+<ul>
+<li><a href="#css%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E6%96%B9%E6%B3%95">CSS清除浮动方法</a></li>
 </ul>
 </li>
 </ul>
