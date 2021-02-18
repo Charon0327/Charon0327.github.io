@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSS定位 | Gridea</title>
-<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613649845788">
+<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613652963621">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="CSS定位 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
@@ -12,9 +12,10 @@
 
 
     <meta name="description" content="CSS有三种基本的定位机制：普通流，浮动和绝对定位。
-###position属性实现定位
+position属性实现定位
 通过使用position属性，可以选择四种不同类型的定位，这会影响元素框生成的方式。
-    position：static  静止定位，元素默认状态..." />
+    position：static  静止定位，元素默认状态
+  ..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -24,7 +25,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://Charon0327.github.io">
-  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1613649845788" alt="">
+  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1613652963621" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -91,24 +92,24 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>CSS有三种基本的定位机制：普通流，浮动和绝对定位。<br>
-###position属性实现定位<br>
-通过使用position属性，可以选择四种不同类型的定位，这会影响元素框生成的方式。<br>
+                <p>CSS有三种基本的定位机制：普通流，浮动和绝对定位。</p>
+<h3 id="position属性实现定位">position属性实现定位</h3>
+<p>通过使用position属性，可以选择四种不同类型的定位，这会影响元素框生成的方式。<br>
     position：static  静止定位，元素默认状态<br>
     position：absolute  绝对定位，相对于最近的有定位的父元素进行定位<br>
     position：relative  相对定位，相对于自己原来位置进行定位<br>
-    position：fixed  固定定位，相对于浏览器可视窗口进行定位<br>
-#####position-absolute<br>
-元素相对于最近的，有定位的父级元素定位，如果其父级元素都无定位属性,则相对于body定位。元素脱离文档流(从文档流中删除) , 原本所占空间不保留。元素定位后生成一个行内块级盒子。绝对定位的框可以从它的包含块向上、右、下、 左移动。绝对定位的框脱离普通流，所以它可以覆盖页面上的其他元素，可以通过设置Z-index属性来控制这些框的堆放次序。</p>
+    position：fixed  固定定位，相对于浏览器可视窗口进行定位</p>
+<h5 id="position-absolute">position-absolute</h5>
+<p>元素相对于最近的，有定位的父级元素定位，如果其父级元素都无定位属性,则相对于body定位。元素脱离文档流(从文档流中删除) , 原本所占空间不保留。元素定位后生成一个行内块级盒子。绝对定位的框可以从它的包含块向上、右、下、 左移动。绝对定位的框脱离普通流，所以它可以覆盖页面上的其他元素，可以通过设置Z-index属性来控制这些框的堆放次序。</p>
 <h5 id="position-relative">position-relative</h5>
 <p>相对定位被看作普通流定位模型的一部分，定位元素的位置相对于它在普通流中的位置进行移动。使用相对定位的元素不管它是否进行移动，元素仍要占据它原来的位置。移动元素会导致它覆盖其他的框。</p>
 <h5 id="position-fixed">position-fixed</h5>
-<p>固定定位相对于浏览器可视窗口进行定位，其他表现类似于absolute绝对定位表现。<br>
-###z-index<br>
-z-index属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br>
+<p>固定定位相对于浏览器可视窗口进行定位，其他表现类似于absolute绝对定位表现。</p>
+<h3 id="z-index">z-index</h3>
+<p>z-index属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br>
   相同的定位元素，结构后面的元素在重叠的情况下会默认覆盖结构之前的定位元素。<br>
   元素可拥有负的z-index属性值。<br>
-  Z-index 仅能在定位元素上效(例如position:absolute/fixed/relative; )</p>
+  Z-index 仅能在定位元素上奏效(例如position:absolute/fixed/relative; 通过调节z-index值的大小来改变)</p>
 
               </div>
               <div class="toc-container">
@@ -117,16 +118,15 @@ z-index属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总�
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#position%E5%B1%9E%E6%80%A7%E5%AE%9E%E7%8E%B0%E5%AE%9A%E4%BD%8D">position属性实现定位</a><br>
+*
 <ul>
-<li>
-<ul>
+<li><a href="#position-absolute">position-absolute</a></li>
 <li><a href="#position-relative">position-relative</a></li>
 <li><a href="#position-fixed">position-fixed</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li><a href="#z-index">z-index</a></li>
 </ul>
 </li>
 </ul>
