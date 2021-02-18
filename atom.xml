@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-18T13:36:47.375Z</updated>
+    <updated>2021-02-18T13:58:18.375Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -72,6 +72,14 @@ overflow-x主要用来定义对水平方向内容溢出的剪切，而overflow-y
 </tr>
 </tbody>
 </table>
+<h4 id="css-文本溢出省略号代替单行文本">CSS -文本溢出省略号代替(单行文本)</h4>
+<p>overflow : hidden; //超出隐藏<br>
+text- oveflellisis // 文本超出省略号代替<br>
+white-space:nowrap; // 禁止文字自动换行</p>
+<h3 id="css-margin产生问题">CSS -margin产生问题</h3>
+<p>垂直方向auto值失效( 定位实现垂直居中)<br>
+父元素设置margin- top时,内部的第一个子元素margin-top失效( padding代替,为父元素加边框)<br>
+上下双边距合并(统一设置垂直边距)</p>
 ]]></content>
     </entry>
     <entry>
