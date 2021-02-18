@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-18T12:56:07.722Z</updated>
+    <updated>2021-02-18T13:22:57.610Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -17,7 +17,7 @@
         </link>
         <updated>2021-02-18T03:12:01.000Z</updated>
         <content type="html"><![CDATA[<p>CSS有三种基本的定位机制：普通流，浮动和绝对定位。</p>
-<h3 id="position属性实现定位">position属性实现定位</h3>
+<h3 id="css定位position属性实现定位">CSS定位/position属性实现定位</h3>
 <p>通过使用position属性，可以选择四种不同类型的定位，这会影响元素框生成的方式。<br>
     position：static  静止定位，元素默认状态<br>
     position：absolute  绝对定位，相对于最近的有定位的父元素进行定位<br>
@@ -29,11 +29,16 @@
 <p>相对定位被看作普通流定位模型的一部分，定位元素的位置相对于它在普通流中的位置进行移动。使用相对定位的元素不管它是否进行移动，元素仍要占据它原来的位置。移动元素会导致它覆盖其他的框。</p>
 <h5 id="position-fixed">position-fixed</h5>
 <p>固定定位相对于浏览器可视窗口进行定位，其他表现类似于absolute绝对定位表现。</p>
-<h3 id="z-index">z-index</h3>
+<h3 id="css定位z-index">CSS定位/z-index</h3>
 <p>z-index属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br>
-  相同的定位元素，结构后面的元素在重叠的情况下会默认覆盖结构之前的定位元素。<br>
-  元素可拥有负的z-index属性值。<br>
-  Z-index 仅能在定位元素上奏效(例如position:absolute/fixed/relative; 通过调节z-index值的大小来改变)</p>
+    相同的定位元素，结构后面的元素在重叠的情况下会默认覆盖结构之前的定位元素。<br>
+    元素可拥有负的z-index属性值。<br>
+    Z-index 仅能在定位元素上奏效(例如position:absolute/fixed/relative; 通过调节z-index值的大小来改变)</p>
+<h3 id="css定位元素垂直居中">CSS定位/元素垂直居中</h3>
+<p>利用position定位可实现元素的垂直居中<br>
+    父元素需要有定位( poisition:absolute/relative/fixed );<br>
+    垂直居中元素进行绝对定位position : absolute<br>
+    top:50%; left:50%; margin-left: 元素宽度margin-top: -元素宽度;</p>
 ]]></content>
     </entry>
     <entry>
