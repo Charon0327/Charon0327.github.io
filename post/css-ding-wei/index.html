@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSS定位 | Gridea</title>
-<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613654711742">
+<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613655401392">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="CSS定位 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
@@ -24,7 +24,7 @@ CSS定位/position属性实现定位
       <div class="main-content">
         <div class="site-header">
   <a href="https://Charon0327.github.io">
-  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1613654711742" alt="">
+  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1613655401392" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -84,7 +84,7 @@ CSS定位/position属性实现定位
                 2021-02-18
               </span>
               <span>
-                3 min read
+                4 min read
               </span>
               
             </div>
@@ -118,7 +118,35 @@ CSS定位/position属性实现定位
 <p>当一个元素固定为某个特定大小，但内容在元素中放不下F。此时就可以利用overflow属性米控制这种情况<br>
     值: visible | hidden | scroll | auto I inherit<br>
     初始值; vislble<br>
-    应用于:块级元素，特换元素，表单元格</p>
+    应用于:块级元素，特换元素，表单元格<br>
+overflow-x主要用来定义对水平方向内容溢出的剪切，而overflow-y主要用来定义对垂直方向内容溢出的剪切。<br>
+注意如果:overflow-x和overflow-y相同则等同于overflow，如果overflow-x和overflow-y值不同，且其中一个值显式设置为visible或末设置默认为visible ，而另外一个值是非visible的值，则visible 会被重置为auto。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">visible</td>
+<td style="text-align:center">元素的内容在元素框之外也可见</td>
+</tr>
+<tr>
+<td style="text-align:center">auto</td>
+<td style="text-align:center">如果内容被裁减，则浏览器会显示滚动条以便查看其余的内容</td>
+</tr>
+<tr>
+<td style="text-align:center">scroll</td>
+<td style="text-align:center">元素的内容会在元素框的边界处裁减，但浏览器会显示滚动条以便查看其余的内容</td>
+</tr>
+<tr>
+<td style="text-align:center">hidden</td>
+<td style="text-align:center">元素的内容会在元素框的边界处裁减，并且超出裁减区域的内容不可见</td>
+</tr>
+</tbody>
+</table>
 
               </div>
               <div class="toc-container">
