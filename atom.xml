@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-19T03:33:51.494Z</updated>
+    <updated>2021-02-19T04:07:24.234Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -22,7 +22,7 @@
       选择器前缀法(即选择器Hack):例如IE6能识别*html .class{}, IE7能识别*+html .class{}或者* :first-child+html .class{}。<br>
       IE条件注释法(即HTML条件注释Hack):针对所有IE(注: IE10+已经 不再支持条件注释): &lt;!- -[if IE]&gt;IE浏览器显示的内容&lt; ![endif]--&gt;,针对IE6及以下版不: &lt;!- -[if It IE 6]&gt;只在IE6-显示的内容&lt;![endif]--&gt;. 这类Hack不仅对CSS生效， 对写在判断语句里面的所有代码都会生效。</p>
 <ol>
-<li>条件注释法：<br>
+<li>CSS hack方式一：条件注释法：<br>
 这种方式是IE浏览器转有的Hack方式。
 <ul>
 <li>只在IE下生效</li>
@@ -59,6 +59,30 @@
 	这段文字在非IE浏览器中显示
 &lt;![endif]--&gt;
 </code></pre>
+</li>
+<li>CSS hack方式二:类内属性前缀法<br>
+属性前缀法是在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果。
+<ul>
+<li>&quot;\9”IE6/IE7/IE8/IE9/IE10都生效<br>
+<code>background-color: red\9;</code></li>
+<li>&quot;\0”IE8/IE9/IE10都生效，是IE8/9/ 10的hack</li>
+<li>&quot;\9\0&quot; 只对IE9/IE10生效，是IE9/10的hack</li>
+<li>“减号是IE6专有的hack</li>
+<li>+ IE7识别的hack方法</li>
+</ul>
+</li>
+<li>CSS hack方式三:选择器前缀法<br>
+选择器前缀法是针对一些页面表现不一致或者 需要特殊对待的浏览器,在CSS选择器前<br>
+加上一些只有某些特定浏览器才能识别的前缀进行hack。<br>
+   * + html *+前缀只对E7生效
+<ul>
+<li>@media screen\9{...}只对IE6/7生效</li>
+<li>@media \Oscreen {body { background: red; }}只对IE8有效</li>
+<li>@media \Oscreen,screen\9{body { background: blue; }只对IE6/7/8有效</li>
+<li>@media screen\0 {body { background: green; }}只对IE8/9/10有效</li>
+<li>@media screen and (min-width:0\0) {body { background: gray; }}只对IE9/10有效</li>
+<li>@media screen and (-ms-high-contrast: active), (-ms-high contrast: none) {body { background: orange; }}只对E10有效</li>
+</ul>
 </li>
 </ol>
 ]]></content>

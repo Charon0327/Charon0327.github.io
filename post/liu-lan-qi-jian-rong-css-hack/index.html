@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>浏览器兼容CSS hack | Gridea</title>
-<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613705627219">
+<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613707640830">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="浏览器兼容CSS hack | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
@@ -23,7 +23,7 @@ CSS Hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以�
       <div class="main-content">
         <div class="site-header">
   <a href="https://Charon0327.github.io">
-  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1613705627219" alt="">
+  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1613707640830" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -83,7 +83,7 @@ CSS Hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以�
                 2021-02-19
               </span>
               <span>
-                2 min read
+                3 min read
               </span>
               
             </div>
@@ -96,7 +96,7 @@ CSS Hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以�
       选择器前缀法(即选择器Hack):例如IE6能识别*html .class{}, IE7能识别*+html .class{}或者* :first-child+html .class{}。<br>
       IE条件注释法(即HTML条件注释Hack):针对所有IE(注: IE10+已经 不再支持条件注释): &lt;!- -[if IE]&gt;IE浏览器显示的内容&lt; ![endif]--&gt;,针对IE6及以下版不: &lt;!- -[if It IE 6]&gt;只在IE6-显示的内容&lt;![endif]--&gt;. 这类Hack不仅对CSS生效， 对写在判断语句里面的所有代码都会生效。</p>
 <ol>
-<li>条件注释法：<br>
+<li>CSS hack方式一：条件注释法：<br>
 这种方式是IE浏览器转有的Hack方式。
 <ul>
 <li>只在IE下生效</li>
@@ -133,6 +133,30 @@ CSS Hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以�
 	这段文字在非IE浏览器中显示
 &lt;![endif]--&gt;
 </code></pre>
+</li>
+<li>CSS hack方式二:类内属性前缀法<br>
+属性前缀法是在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果。
+<ul>
+<li>&quot;\9”IE6/IE7/IE8/IE9/IE10都生效<br>
+<code>background-color: red\9;</code></li>
+<li>&quot;\0”IE8/IE9/IE10都生效，是IE8/9/ 10的hack</li>
+<li>&quot;\9\0&quot; 只对IE9/IE10生效，是IE9/10的hack</li>
+<li>“减号是IE6专有的hack</li>
+<li>+ IE7识别的hack方法</li>
+</ul>
+</li>
+<li>CSS hack方式三:选择器前缀法<br>
+选择器前缀法是针对一些页面表现不一致或者 需要特殊对待的浏览器,在CSS选择器前<br>
+加上一些只有某些特定浏览器才能识别的前缀进行hack。<br>
+   * + html *+前缀只对E7生效
+<ul>
+<li>@media screen\9{...}只对IE6/7生效</li>
+<li>@media \Oscreen {body { background: red; }}只对IE8有效</li>
+<li>@media \Oscreen,screen\9{body { background: blue; }只对IE6/7/8有效</li>
+<li>@media screen\0 {body { background: green; }}只对IE8/9/10有效</li>
+<li>@media screen and (min-width:0\0) {body { background: gray; }}只对IE9/10有效</li>
+<li>@media screen and (-ms-high-contrast: active), (-ms-high contrast: none) {body { background: orange; }}只对E10有效</li>
+</ul>
 </li>
 </ol>
 
