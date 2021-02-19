@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-19T04:07:24.234Z</updated>
+    <updated>2021-02-19T04:17:50.244Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://Charon0327.github.io/images/avatar.png</logo>
     <icon>https://Charon0327.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[CSS-opacity属性]]></title>
+        <id>https://Charon0327.github.io/post/css-opacity-shu-xing/</id>
+        <link href="https://Charon0327.github.io/post/css-opacity-shu-xing/">
+        </link>
+        <updated>2021-02-19T04:08:36.000Z</updated>
+        <content type="html"><![CDATA[<p>一个css3属性,该属性用于设置元素的不透明度级别，所有的浏览器都支持这个属性。<br>
+语法: <code>opacity:value|inherit;</code><br>
+参数说明:<br>
+    ➢value:规定不透明度。从0.0(完全透明)到1.0(完全不透明)。<br>
+    ➢inherit :应该从父元素继承opacity属性的值。<br>
+IE8以及更早的版本使用滤镜filter:alpha(opacity=x)。x能够取的值从0到100。值<br>
+越小，越透明。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[浏览器兼容CSS hack]]></title>
         <id>https://Charon0327.github.io/post/liu-lan-qi-jian-rong-css-hack/</id>
