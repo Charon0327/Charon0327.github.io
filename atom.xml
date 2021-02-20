@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-19T13:57:53.157Z</updated>
+    <updated>2021-02-20T04:01:41.511Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -10,6 +10,108 @@
     <logo>https://Charon0327.github.io/images/avatar.png</logo>
     <icon>https://Charon0327.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[CSS图片精灵/三列布局]]></title>
+        <id>https://Charon0327.github.io/post/css-tu-pian-jing-ling-san-lie-bu-ju/</id>
+        <link href="https://Charon0327.github.io/post/css-tu-pian-jing-ling-san-lie-bu-ju/">
+        </link>
+        <updated>2021-02-20T02:59:59.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="图片精灵">图片精灵</h1>
+<p>css sprites就是CSS精灵，通过背景定位技术布局网页背景。因为图片多的话，会增加http的请求，使得网站性能降低。<br>
+<strong>➢适合:-般小图标素材</strong><br>
+小的图标ico类素材, -般图标很小十多像素几十像素的宽度高度，这种适合拼合成张图实现sprites background背景定位布局。小icon太多自然加载网页时瞬间会消耗些http请求链接数;<br>
+<strong>➢不适合:大图大背景</strong><br>
+大背景一般用于网页背景,拼合时,设置为网页背景时所有背景都会显示出来。大图拼接拼合会增大图片大小，网络带宽不好的访问者访问时由于背景图大文件大会加载稍慢些，所以大图不推荐拼接拼合来使用css sprites背景定位布局。<br>
+<strong>➢sprites适合推荐小结</strong><br>
+一般此sprites拼合布局用于局部小盒子布局不适合大背景大布局背景使用。比如小局部布局<br>
+小图标背景、小导航背景等DIVCSS布局。<br>
+通过给盒子一个背景图片，然后通过background-position调节位置</p>
+<h1 id="三列布局的创建">三列布局的创建</h1>
+<p>所谓三列自适应布局指的是两边定宽,中间block宽度自适应。只需给宽度自适应两列布局中间再加一列，然后重新计算三列的宽度，就实现了宽度自适应的三列布局。同样的道理，更多列的布局，其实和两列、三列的布局模式是一样的。<br>
+<strong>常用方法:</strong></p>
+<ol>
+<li>定位<br>
+左右两栏采用绝对定位,固定宽度，分别固定于页面的左右两侧，中间的主体栏用左右margin值撑开距离。于是实现了三栏自适应布局。</li>
+</ol>
+<pre><code>      &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;
+  	&lt;div class=&quot;middle&quot;&gt;middle&lt;/div&gt;
+  	&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;
+  		*{
+  			margin: 0;
+  			padding: 0;
+  		}
+  		.left{
+  			width: 200px;
+  			height: 500px;
+  			background-color: aqua;
+  			position: absolute;
+  			left: 0;
+  			top: 0;
+  		}
+  		.right{
+  			width: 200px;
+  			height: 500px;
+  			background-color: aqua;
+  			position: absolute;
+  			right: 0;
+  			top: 0;
+  		}
+  		.middle{
+  			height: 600px;
+  			background-color: burlywood;
+  			margin: 0 200px;
+  		}
+</code></pre>
+<ol start="2">
+<li>浮动<br>
+左栏左浮动，右栏右浮动，主体直接<strong>放在后面</strong>就实现了自适应。<pre><code>&lt;style type=&quot;text/css&quot;&gt;
+ 		*{
+ 			margin: 0;
+ 			padding: 0;
+ 		}
+ 		.left{
+ 			width: 200px;
+ 			height: 500px;
+ 			background-color: aquamarine;
+ 			float: left;
+ 		}
+ 		.right{
+ 			width: 200px;
+ 			height: 500px;
+ 			background-color: aquamarine;
+ 			float: right;
+ 		}
+ 		.center{
+ 			height: 500px;
+ 			background-color: coral;
+             margin: 0 200px;
+             min-width: 300px;/*小于300px固定不动*/
+ 		}		
+ 	&lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ 	&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+ 	&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+ 	&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
+ &lt;/body&gt;
+</code></pre>
+<ul>
+<li>min-heigth/width<br>
+min方法定义了元素的最小的宽高度,该属性值会对元素的高度设置一个最低限制。因此,元素可以比指定值宽与高,但不能比其矮。不允许指定负值。取值单位: px/%;<br>
+<code>div{min-width:500px;min-height:300px;}</code><br>
+当页面发生改变的时候,元素保留最小宽高度，超出滚动条代替</li>
+<li>max-heigth/width<br>
+max方法定义了元素的最大的宽高度，该属性值会对元素的高度设置一个最大限制。因此，元素可以比指定值宽与高，但不能比其高。不允许指定负值。取值单位: px/%;<br>
+<code>div{max width:500px;max- height:300px;}</code><br>
+此属性很少使用,是为了避免内容太多将高度撑太高影响布局美化统一，这个时候我们设置最大高度限制。比如一个table tr td表格对象里装一个图片，而图片高度不确定，如果太高了不想图片撑破tr td表格,这个时候通过css max-height限制图片最大高度<br>
+是有必要的。</li>
+</ul>
+</li>
+<li>弹性盒布局<br>
+<img src="https://Charon0327.github.io/post-images/1613793661162.PNG" alt="" loading="lazy"></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[案例]]></title>
         <id>https://Charon0327.github.io/post/an-li/</id>
