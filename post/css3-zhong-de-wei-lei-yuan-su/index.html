@@ -2,23 +2,23 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>html5新标签介绍 | Gridea</title>
+<title>CSS3中的伪类元素 | Gridea</title>
 <link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613993051717">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="html5新标签介绍 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="CSS3中的伪类元素 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="新增标签
-header→头部
-nav→导航
-section→主体
-article→文章
-footer→尾部
-input
-    type：text/url/password/submit/number/email/tel/date/sear..." />
+    <meta name="description" content="伪类元素
+:after   ::after
+用于在一个元素的后面生成内容
+:before   ::before
+用于在一个元素的前面生成内容
+他们都可以通过定义一个 content的属性来生成指定的内容, content属性值可以是：
+
+文..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -81,11 +81,11 @@ input
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              html5新标签介绍
+              CSS3中的伪类元素
             </h2>
             <div class="post-info">
               <span>
-                2021-02-20
+                2021-02-22
               </span>
               <span>
                 1 min read
@@ -95,31 +95,34 @@ input
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="新增标签"><strong>新增标签</strong></h2>
-<p>header→头部<br>
-nav→导航<br>
-section→主体<br>
-article→文章<br>
-footer→尾部</p>
-<p>input<br>
-    type：text/url/password/submit/number/email/tel/date/search/range<br>
-    autofocus→文本框自动获得焦点<br>
-    require→该文本框是必填项</p>
-<p>small→小号字体<br>
-big→大号字体</p>
-<p>data-*：自定义属性<br>
-<code>&lt;header id=&quot;head&quot; data-title=&quot;head&quot;&gt;&lt;/header&gt;</code></p>
-<p>contenteditable:可以让用户编辑网页上的文本内容</p>
-<h2 id="新增的api跟js相关的"><strong>新增的API(跟js相关的)</strong></h2>
-<p>audio/vedio/SVG/canvas/本地存储/离线缓存.......</p>
+                <h2 id="伪类元素">伪类元素</h2>
+<p>:after   ::after<br>
+用于在一个元素的后面生成内容<br>
+:before   ::before<br>
+用于在一个元素的前面生成内容</p>
+<p>他们都可以通过定义一个 <code>content</code>的属性来生成指定的内容, <code>content</code>属性值可以是：</p>
+<ol>
+<li>文本或字符串</li>
+<li>也可以通过url导入图片等</li>
+</ol>
+<p>说明：因为以上两个方法生成的内容都说是内联的形式展示的，所以在定义他们的时候，一定记得将他们转成块元素。<br>
+:after   通常用于清除浮动</p>
+<pre><code>.clearfix:after{
+    content:&quot;&quot;;
+    display:block;
+    width:0;
+    height:0;
+    overflow:hidden;
+    clear:both;
+}
+</code></pre>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%96%B0%E5%A2%9E%E6%A0%87%E7%AD%BE"><strong>新增标签</strong></a></li>
-<li><a href="#%E6%96%B0%E5%A2%9E%E7%9A%84api%E8%B7%9Fjs%E7%9B%B8%E5%85%B3%E7%9A%84"><strong>新增的API(跟js相关的)</strong></a></li>
+<li><a href="#%E4%BC%AA%E7%B1%BB%E5%85%83%E7%B4%A0">伪类元素</a></li>
 </ul>
 </li>
 </ul>
@@ -132,9 +135,9 @@ big→大号字体</p>
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://Charon0327.github.io/post/css-tu-pian-jing-ling-san-lie-bu-ju/">
+            <a href="https://Charon0327.github.io/post/html5-xin-biao-qian-jie-shao/">
               <h3 class="post-title">
-                CSS图片精灵/三列布局
+                html5新标签介绍
               </h3>
             </a>
           </div>
