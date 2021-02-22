@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSS基础 | Gridea</title>
-<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613818695789">
+<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1613990201066">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="CSS基础 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
@@ -25,7 +25,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://Charon0327.github.io">
-  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1613818695789" alt="">
+  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1613990201066" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -206,6 +206,19 @@ letter-spacing属性的可取值包括所有长度。默认关键字为normal</p
 默认属性值：normal<br>
 禁止换行：nowrap</p>
 <h2 id="css字体属性"><strong>CSS字体属性</strong></h2>
+<h5 id="自定义字体">自定义字体</h5>
+<p>www.dafont.com<br>
+使用自定义字体，需要用到css3的属性@font-face</p>
+<pre><code>    @font-face{
+        font-family:&quot;你自己给你的字体起的名字&quot;；
+        src:url(&quot;字体的路径&quot;)；
+         src:url(&quot;字体的路径&quot;) format(&quot;帮助浏览器识别我们的字体&quot;)
+         ,url(&quot;字体的路径&quot;) fomat(&quot;帮助浏览器识别我们的字体&quot;)；
+    }
+    div{
+        font-family:&quot;你自己给你的字体起的名字&quot;；
+    }
+</code></pre>
 <h4 id="字体变形font-variant">字体变形font-variant</h4>
 <table>
 <thead>
@@ -348,7 +361,9 @@ background-attachment声明图像相对于可视区是固定的(fixed)，不会�
 </ul>
 </li>
 <li><a href="#css%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><strong>CSS字体属性</strong></a><br>
-*
+*<br>
+*<br>
+* <a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93">自定义字体</a>
 <ul>
 <li><a href="#%E5%AD%97%E4%BD%93%E5%8F%98%E5%BD%A2font-variant">字体变形font-variant</a></li>
 <li><a href="#%E5%AD%97%E4%BD%93%E9%A3%8E%E6%A0%BCfont-style">字体风格font-style</a></li>
