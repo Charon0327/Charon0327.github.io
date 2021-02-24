@@ -2,18 +2,23 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>案例 | Gridea</title>
+<title>CSS中的属性应用 | Gridea</title>
 <link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1614163123900">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="案例 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="CSS中的属性应用 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="title标题中的图片导入方式
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/icon&quot; href=&quot;img/favicon.ico&quot;&gt;
-..." />
+    <meta name="description" content="CSS3中的边框
+
+圆角
+border-radius:value
+value的取值：number  (px)  或者百分比
+单独的圆角：top-left|top-right|bottom-left|bottom-right
+阴影
+box-s..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -76,39 +81,121 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              案例
+              CSS中的属性应用
             </h2>
             <div class="post-info">
               <span>
-                2021-02-19
+                2021-02-24
               </span>
               <span>
-                1 min read
+                3 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h4 id="title标题中的图片导入方式">title标题中的图片导入方式</h4>
-<p><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/icon&quot; href=&quot;img/favicon.ico&quot;&gt;</code></p>
+                <h1 id="css3中的边框">CSS3中的边框</h1>
+<ol>
+<li>圆角<br>
+<code>border-radius:value</code><br>
+value的取值：number  (px)  或者百分比<br>
+单独的圆角：top-left|top-right|bottom-left|bottom-right</li>
+<li>阴影<br>
+<code>box-shadow:a b c d e f</code><br>
+a:左右的阴影，a&gt;0阴影是右边的，a&lt;0阴影是左边的<br>
+b:上下的阴影，b&gt;0阴影是下边的，b&lt;0阴影是上边的<br>
+c:阴影的模糊半径<br>
+d:阴影外延的长度<br>
+e:阴影的颜色<br>
+f:阴影的方向是向内还是向外<br>
+单边阴影：<code>box-shadow:10px 00 red;</code></li>
+<li>图画边框<br>
+background:背景图<br>
+<code>border-image:url(&quot;&quot;) a b c</code><br>
+a:上下距离的切割半径<br>
+b:左右距离的切割半径<br>
+c:背景图的排列方式</li>
+</ol>
+<h1 id="transition过渡">transition过渡</h1>
+<p>width：100px===&gt;200px<br>
+<code>transition:attr duration timing-function delay;</code><br>
+attr:要变化的属性<br>
+duration:过渡的时间（s/ms）<br>
+timing-function:过渡的曲线<br>
+delay:延迟的时间</p>
+<p>timing-function：<br>
+  ease：默认值，逐渐变慢<br>
+  linear：直线变化<br>
+  ease-in：加速<br>
+  ease-out：减速<br>
+  ease-in-out：先慢再快再慢<br>
+  cubic-bezier：贝塞尔曲线（x1,y1,x2,y2）</p>
+<h1 id="transform-变形">transform 变形</h1>
+<p>浏览器象限：右边是x轴正方向；下边是y轴正方向。<br>
+旋转：顺时针为正方向<br>
+transform:translate(平移)  rotate(旋转) scale(缩放) shew(倾斜)<br>
+只向x平移<code>transform:translateX(100px)</code><br>
+只沿y轴旋转<code>transform:rotateY(45deg)</code><br>
+只在x轴缩放<code>transform:scaleX(2)</code><br>
+倾斜45度<code>transform:shew(45deg)</code></p>
+<h1 id="animation动画">animation动画</h1>
+<ol>
+<li>定义动画<br>
+@keyframes animationName{<br>
+规定动画执行的内容<br>
+}<pre><code>@keyframes ani{
+    from{
+        width:100px;
+    }
+    to{
+        width:1000px;
+    }
+}
+</code></pre>
+或</li>
+</ol>
+<pre><code>@keyframes ani{
+    0%{
+        width:100px
+        background: blue ;
+    }
+    25%{
+        width :200px;
+        backg round: yellow;
+    }
+    50%{
+        width : 400px;
+        background: red ;
+    }
+    75%{
+        width : 600px ;
+        background: black;
+    }
+    100%{
+        width: 700px;
+        background: blue ;
+    }
+}
+</code></pre>
+<ol start="2">
+<li>调用动画<br>
+<code>animation:name duration timing-function delay iteration-cont direction</code><br>
+name:动画的名称<br>
+duration:动画完成一次的时长(s/ms) ，默认值是0<br>
+timing-function:动画曲线，默认值是ease<br>
+delay :动画延迟的时间，默认值是0<br>
+iteration-cont :动画执行几次，默认值是1<br>
+direction:动画的方向，默认值是normal, 另外一个值是alternate</li>
+</ol>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#title%E6%A0%87%E9%A2%98%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F">title标题中的图片导入方式</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#css3%E4%B8%AD%E7%9A%84%E8%BE%B9%E6%A1%86">CSS3中的边框</a></li>
+<li><a href="#transition%E8%BF%87%E6%B8%A1">transition过渡</a></li>
+<li><a href="#transform-%E5%8F%98%E5%BD%A2">transform 变形</a></li>
+<li><a href="#animation%E5%8A%A8%E7%94%BB">animation动画</a></li>
 </ul>
 
               </div>
@@ -119,9 +206,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://Charon0327.github.io/post/css-opacity-shu-xing/">
+            <a href="https://Charon0327.github.io/post/zi-ti-tu-biao/">
               <h3 class="post-title">
-                CSS-opacity属性
+                字体图标
               </h3>
             </a>
           </div>

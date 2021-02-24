@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-24T05:50:16.731Z</updated>
+    <updated>2021-02-24T10:38:48.418Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -10,6 +10,107 @@
     <logo>https://Charon0327.github.io/images/avatar.png</logo>
     <icon>https://Charon0327.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[CSS中的属性应用]]></title>
+        <id>https://Charon0327.github.io/post/css-zhong-de-shu-xing-ying-yong/</id>
+        <link href="https://Charon0327.github.io/post/css-zhong-de-shu-xing-ying-yong/">
+        </link>
+        <updated>2021-02-24T05:50:42.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="css3中的边框">CSS3中的边框</h1>
+<ol>
+<li>圆角<br>
+<code>border-radius:value</code><br>
+value的取值：number  (px)  或者百分比<br>
+单独的圆角：top-left|top-right|bottom-left|bottom-right</li>
+<li>阴影<br>
+<code>box-shadow:a b c d e f</code><br>
+a:左右的阴影，a&gt;0阴影是右边的，a&lt;0阴影是左边的<br>
+b:上下的阴影，b&gt;0阴影是下边的，b&lt;0阴影是上边的<br>
+c:阴影的模糊半径<br>
+d:阴影外延的长度<br>
+e:阴影的颜色<br>
+f:阴影的方向是向内还是向外<br>
+单边阴影：<code>box-shadow:10px 00 red;</code></li>
+<li>图画边框<br>
+background:背景图<br>
+<code>border-image:url(&quot;&quot;) a b c</code><br>
+a:上下距离的切割半径<br>
+b:左右距离的切割半径<br>
+c:背景图的排列方式</li>
+</ol>
+<h1 id="transition过渡">transition过渡</h1>
+<p>width：100px===&gt;200px<br>
+<code>transition:attr duration timing-function delay;</code><br>
+attr:要变化的属性<br>
+duration:过渡的时间（s/ms）<br>
+timing-function:过渡的曲线<br>
+delay:延迟的时间</p>
+<p>timing-function：<br>
+  ease：默认值，逐渐变慢<br>
+  linear：直线变化<br>
+  ease-in：加速<br>
+  ease-out：减速<br>
+  ease-in-out：先慢再快再慢<br>
+  cubic-bezier：贝塞尔曲线（x1,y1,x2,y2）</p>
+<h1 id="transform-变形">transform 变形</h1>
+<p>浏览器象限：右边是x轴正方向；下边是y轴正方向。<br>
+旋转：顺时针为正方向<br>
+transform:translate(平移)  rotate(旋转) scale(缩放) shew(倾斜)<br>
+只向x平移<code>transform:translateX(100px)</code><br>
+只沿y轴旋转<code>transform:rotateY(45deg)</code><br>
+只在x轴缩放<code>transform:scaleX(2)</code><br>
+倾斜45度<code>transform:shew(45deg)</code></p>
+<h1 id="animation动画">animation动画</h1>
+<ol>
+<li>定义动画<br>
+@keyframes animationName{<br>
+规定动画执行的内容<br>
+}<pre><code>@keyframes ani{
+    from{
+        width:100px;
+    }
+    to{
+        width:1000px;
+    }
+}
+</code></pre>
+或</li>
+</ol>
+<pre><code>@keyframes ani{
+    0%{
+        width:100px
+        background: blue ;
+    }
+    25%{
+        width :200px;
+        backg round: yellow;
+    }
+    50%{
+        width : 400px;
+        background: red ;
+    }
+    75%{
+        width : 600px ;
+        background: black;
+    }
+    100%{
+        width: 700px;
+        background: blue ;
+    }
+}
+</code></pre>
+<ol start="2">
+<li>调用动画<br>
+<code>animation:name duration timing-function delay iteration-cont direction</code><br>
+name:动画的名称<br>
+duration:动画完成一次的时长(s/ms) ，默认值是0<br>
+timing-function:动画曲线，默认值是ease<br>
+delay :动画延迟的时间，默认值是0<br>
+iteration-cont :动画执行几次，默认值是1<br>
+direction:动画的方向，默认值是normal, 另外一个值是alternate</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[字体图标]]></title>
         <id>https://Charon0327.github.io/post/zi-ti-tu-biao/</id>
@@ -507,259 +608,6 @@ border:1px solid #eee;</p>
 2.利用伪类元素清除浮动<br>
   after{ content:&quot;&quot;; display:block; clear:both}<br>
 3.触发父级元素BFC模式进行浮动的清除 overflow:hidden;</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSS基础]]></title>
-        <id>https://Charon0327.github.io/post/css-ji-chu/</id>
-        <link href="https://Charon0327.github.io/post/css-ji-chu/">
-        </link>
-        <updated>2021-01-25T11:10:12.000Z</updated>
-        <content type="html"><![CDATA[<p>外部导入：@import（不推荐）<br>
-外部样式表：<br>
-&lt; head&gt;&lt; link css/demo.css&gt;&lt; /head&gt;<br>
-内部样式表：<br>
-&lt; head&gt;&lt; style&gt;css样式&lt; /style&gt;&lt; /head&gt;<br>
-内联样式表：<br>
-&lt; div style=&quot;background-color:red&quot;&gt;&lt; /div&gt;<br>
-CSS由两个主要的部分构成：选择器，以及一条或多条声明<br>
-每条声明由一个属性和一个值组成<br>
-<strong>优先级</strong><br>
-!important&gt;行内&gt;id&gt;类选择器&gt;标签选择器<br>
-<strong>常用选择器种类</strong><br>
-id选择器<br>
-类选择器<br>
-标签选择器<br>
-后代选择器<br>
-子元素选择器<br>
-分组选择器<br>
-相邻兄弟选择器<br>
-伪类<br>
-伪元素<br>
-通用选择器<br>
-<strong>## CSS文本属性</strong><br>
-CSS文本属性课定义文本的外观，通过文本属性，可以改变文本的颜色、字符间距，对齐文本，装饰文本，对文本进行缩进等。</p>
-<h3 id="文本颜色color">文本颜色color</h3>
-<p>            设置文本颜色<br>
-           color_name规定颜色值为颜色名称的颜色（如red）<br>
-          hex_number 规定颜色值为十六进制的颜色<br>
-          rgb_number规定颜色值为rgb的颜色（如rgb(255,0,0））</p>
-<h3 id="行间距line-height">行间距line-height</h3>
-<p>           设置行间距离<br>
-           不允许使用负值<br>
-          单行文字可实现元素的垂直居中<br>
-          默认继承父元素line-height</p>
-<h3 id="文本缩进text-indent">文本缩进text-indent</h3>
-<p>所有元素的第一行都可以缩进一个给定的长度，甚至该长度可以是负值。<br>
-可以为所有块级元素应用text-indent，但无法将该属性应用于行内元素。<br>
-使用负值<br>
-使用百分比<br>
-text-indent属性可以继承</p>
-<h3 id="文本对齐text-align">文本对齐text-align</h3>
-<p>它会影响一个元素中的文本行互相之间的对齐方式<br>
-值left、right和center会导致元素中的文本分别左对齐、右对齐和居中。</p>
-<h3 id="文本修饰text-decoration">文本修饰text-decoration</h3>
-<p>主要设定文本划线的属性</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">none</td>
-<td style="text-align:center">无</td>
-</tr>
-<tr>
-<td style="text-align:center">underline</td>
-<td style="text-align:center">下划线</td>
-</tr>
-<tr>
-<td style="text-align:center">overline</td>
-<td style="text-align:center">上划线</td>
-</tr>
-<tr>
-<td style="text-align:center">line-through</td>
-<td style="text-align:center">当中下划线</td>
-</tr>
-</tbody>
-</table>
-<h3 id="字间隔word-spacing">字间隔word-spacing</h3>
-<p>可以改变字（单词）之间的标准间隔，默认值normal与设置值为0是一样的<br>
-属性接受一个正长度值或负长度值。如果提供一个正长度值，字之间的间隔会增加。为word-spacing设置一个负值，会把它拉近。</p>
-<h3 id="字母间隔letter-spacing">字母间隔letter-spacing</h3>
-<p>字母间隔修改的是字符或字母之间的间隔<br>
-letter-spacing属性的可取值包括所有长度。默认关键字为normal</p>
-<h3 id="字符转换text-transform">字符转换text-transform</h3>
-<p>用于处理文本大小写</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">none</td>
-<td style="text-align:center">文本正常显示</td>
-</tr>
-<tr>
-<td style="text-align:center">uppercase</td>
-<td style="text-align:center">文本全部转换为大写</td>
-</tr>
-<tr>
-<td style="text-align:center">lowercase</td>
-<td style="text-align:center">文本全部转换为小写</td>
-</tr>
-<tr>
-<td style="text-align:center">capitalize</td>
-<td style="text-align:center">首字母大写</td>
-</tr>
-</tbody>
-</table>
-<h3 id="处理空白符white-space">处理空白符white-space</h3>
-<p>清除源文档中的字符空格，包括换行<br>
-默认属性值：normal<br>
-禁止换行：nowrap</p>
-<h2 id="css字体属性"><strong>CSS字体属性</strong></h2>
-<h5 id="自定义字体">自定义字体</h5>
-<p>www.dafont.com<br>
-使用自定义字体，需要用到css3的属性@font-face</p>
-<pre><code>    @font-face{
-        font-family:&quot;你自己给你的字体起的名字&quot;；
-        src:url(&quot;字体的路径&quot;)；
-         src:url(&quot;字体的路径&quot;) format(&quot;帮助浏览器识别我们的字体&quot;)
-         ,url(&quot;字体的路径&quot;) fomat(&quot;帮助浏览器识别我们的字体&quot;)；
-    }
-    div{
-        font-family:&quot;你自己给你的字体起的名字&quot;；
-    }
-</code></pre>
-<h4 id="字体变形font-variant">字体变形font-variant</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">normal</td>
-<td style="text-align:center">默认值。标准字体</td>
-</tr>
-<tr>
-<td style="text-align:center">small-caps</td>
-<td style="text-align:center">浏览器会显示小型大写字母的字体</td>
-</tr>
-<tr>
-<td style="text-align:center">inherit</td>
-<td style="text-align:center">规定应该从父元素继承font-variant属性的值</td>
-</tr>
-</tbody>
-</table>
-<h3 id="字体风格font-style">字体风格font-style</h3>
-<p>最常用于规定斜体文本</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">normal</td>
-<td style="text-align:center">文本正常显示</td>
-</tr>
-<tr>
-<td style="text-align:center">italic</td>
-<td style="text-align:center">文本斜体显示</td>
-</tr>
-<tr>
-<td style="text-align:center">oblique</td>
-<td style="text-align:center">文本倾斜显示</td>
-</tr>
-</tbody>
-</table>
-<h3 id="指定字体font-family">指定字体font-family</h3>
-<p>定义文本的字体系列</p>
-<h3 id="字体加粗font-weight">字体加粗font-weight</h3>
-<p>使用bold将文本字体加粗<br>
-关键字100~900为字体指定了9级加粗度，数字400等价于normal，700等价于bold</p>
-<h2 id="css-链接">CSS 链接</h2>
-<p>链接的四种状态</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">a:link</td>
-<td style="text-align:center">普通的、未被访问的链接</td>
-</tr>
-<tr>
-<td style="text-align:center">a:visited</td>
-<td style="text-align:center">用户已访问的链接</td>
-</tr>
-<tr>
-<td style="text-align:center">a:hover</td>
-<td style="text-align:center">鼠标指针位于链接的上方</td>
-</tr>
-<tr>
-<td style="text-align:center">a:active</td>
-<td style="text-align:center">链接被点击的时刻</td>
-</tr>
-</tbody>
-</table>
-<p>为链接的不同状态设置样式时，按照以下次序规则：<br>
-a:hover必须位于a:link和a:visited之后<br>
-a:active必须位于a:hover之后</p>
-<h2 id="css列表">CSS列表</h2>
-<p>要修改列表项的标志类型，可以使用属性list-style-type:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">square</td>
-<td style="text-align:center">以方形的形式显示</td>
-</tr>
-<tr>
-<td style="text-align:center">circle</td>
-<td style="text-align:center">以圆圈的形式显示</td>
-</tr>
-<tr>
-<td style="text-align:center">upper-roman</td>
-<td style="text-align:center">大写罗马数字</td>
-</tr>
-<tr>
-<td style="text-align:center">lower-alpha</td>
-<td style="text-align:center">小写英文字母</td>
-</tr>
-</tbody>
-</table>
-<h2 id="css表格">CSS表格</h2>
-<p>表格边框：border属性<br>
-折叠边框：border-collapse<br>
-表格宽度高度：width/height<br>
-表格文本对齐：text-align/vertical-align</p>
-<h2 id="css背景">CSS背景</h2>
-<p>background-color<br>
-background-image无法实现继承<br>
-background-image （no-repeat/repeat-x/repeat-y）在页面上对背景图像进行平铺<br>
-background-position设置背景图像的起始位置<br>
-background-attachment声明图像相对于可视区是固定的(fixed)，不会受到滚动的影响</p>
 ]]></content>
     </entry>
 </feed>
