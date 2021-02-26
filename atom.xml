@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-26T03:39:21.314Z</updated>
+    <updated>2021-02-26T11:29:44.741Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -11,7 +11,43 @@
     <icon>https://Charon0327.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[CSS中的属性应用]]></title>
+        <title type="html"><![CDATA[CSS中的属性应用(2)]]></title>
+        <id>https://Charon0327.github.io/post/css-zhong-de-shu-xing-ying-yong-2/</id>
+        <link href="https://Charon0327.github.io/post/css-zhong-de-shu-xing-ying-yong-2/">
+        </link>
+        <updated>2021-02-26T04:08:22.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="渐变">渐变</h1>
+<p>gradient有两种，分别是线性渐变和圆形渐变<br>
+线性渐变默认的方向是从上往下的<br>
+<code>background: -webkit-linear-gradient(red,blue);</code><br>
+如果想指定方向，可以使用left，right，top等,也可以使用角度<br>
+<code>background: -webkit-linear-gradient(left top,red,blue);</code><br>
+使用角度的时候，0deg是向上的，但是我们的浏览器使用了旧的计算方法: 90-x=y, 所以当角度为0<br>
+deg的时候，我们看到的渐变是从左往右的<br>
+也可以给渐变添加多个颜色值<br>
+<code>background: -webkit-linear-gradient(left top,red,blue,pink,green)</code><br>
+颜色也可指定透明度<br>
+<code>rgba(255,0,0,0-1)</code><br>
+<code>background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,0.5),rgba(255,0,0,1))</code><br>
+颜色位置也可以自定义<br>
+<code>background: -webkit-linear-gradient(left,#000 25%,#fff 25%,#fff 50%,#000,50%,#000 75%，#fff 75%)</code></p>
+<p>圆形渐变是从元素的中心开始的<br>
+<code>background: -webkit-radial-gradient(red,blue);</code><br>
+指定圆形渐变的形状 circle，ellipse<br>
+<code>background: -webkit-radial-gradient(circle,red,blue);</code><br>
+至少两个参数，分别代表从某种颜色变化为另外一种颜色</p>
+<h1 id="列column">列column</h1>
+<p>主要属性:<br>
+column-count:指定元素分成多少列(number)<br>
+column-width:指定每一列的宽度(number)<br>
+column-gap:列与列间的空白(number)<br>
+column-rule:分隔符的样式(颜色线的形状宽)<br>
+column-span:指定某元素横跨多少列(1|all)<br>
+columns: column-count 和 column-width 简写</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS中的属性应用(1)]]></title>
         <id>https://Charon0327.github.io/post/css-zhong-de-shu-xing-ying-yong/</id>
         <link href="https://Charon0327.github.io/post/css-zhong-de-shu-xing-ying-yong/">
         </link>
@@ -109,6 +145,21 @@ delay :动画延迟的时间，默认值是0<br>
 iteration-cont :动画执行几次，默认值是1<br>
 direction:动画的方向，默认值是normal, 另外一个值是alternate</li>
 </ol>
+<h1 id="文字样式">文字样式</h1>
+<h3 id="文字阴影text-shadow">文字阴影text-shadow</h3>
+<p><code>text-shadow：a b c d</code><br>
+a:阴影左右方向平移距离<br>
+b:阴影垂直方向的平移距离<br>
+c:阴影的模糊半径<br>
+d:阴影的颜色</p>
+<h3 id="文字镂空">文字镂空</h3>
+<pre><code>-webkit-text-stroke:2px skyblue;
+color:transparent;
+</code></pre>
+<h3 id="长单词换行">长单词换行</h3>
+<pre><code>word-wrap：break-word；
+width：30px;
+</code></pre>
 ]]></content>
     </entry>
     <entry>
@@ -550,64 +601,6 @@ white-space:nowrap; // 禁止文字自动换行</p>
 <p>垂直方向auto值失效( 定位实现垂直居中)<br>
 父元素设置margin- top时,内部的第一个子元素margin-top失效( padding代替,为父元素加边框)<br>
 上下双边距合并(统一设置垂直边距)</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSS盒子模型]]></title>
-        <id>https://Charon0327.github.io/post/css-he-mo-xing-jie-xi-fu-dong/</id>
-        <link href="https://Charon0327.github.io/post/css-he-mo-xing-jie-xi-fu-dong/">
-        </link>
-        <updated>2021-01-26T09:53:22.000Z</updated>
-        <content type="html"><![CDATA[<p>CSS盒模型规定了处理元素的内容、内边距、边框和外边距的方式。<br>
-一切皆为盒子，div，h1，或p元素常常被称为块级元素，意味着这些元素盒子显示为块盒子，span和input等元素称为“行内元素”。</p>
-<h3 id="块级元素与行内元素区别">块级元素与行内元素区别</h3>
-<p>1.块级元素可设置宽高，行内元素宽高由元素内容决定。<br>
-2.块级元素可设置垂直方向的内外边距，行内元素无法设置垂直的内外边距。<br>
-3.块级元素默认显示方式占满整行，相邻的行内元素默认在同一行显示。<br>
-4.通过display属性值进行元素显示方式的更改。</p>
-<h3 id="盒子类型的相互转换">盒子类型的相互转换</h3>
-<p>块级盒子与行内盒子之间通过display值可进行相互的盒子显示方式转换</p>
-<h5 id="常用的display值">常用的display值</h5>
-<p>块级盒子默认 display:block; 转换操作 display:inline-block; display:inline;<br>
-行内盒子默认 display:inline; 转换操作 display:inline-block; display:block;<br>
-行内块盒子默认  display:inline-block;  转换操作 display:block;  display:inline;<br>
-<strong>内外边距</strong><br>
-padding属性规定了盒子的内边距<br>
-border属性规定了盒子的边框<br>
-margin属性规定了盒子的外边距</p>
-<h3 id="内边距padding">内边距padding</h3>
-<p>padding属性接受长度值或百分比值，但不允许使用负值。<br>
-两个值时：上下 左右<br>
-三个值：上 左右 下</p>
-<h3 id="边框border">边框border</h3>
-<p>元素的边框是围绕元素内容和边距的一条或多条线。border允许规定元素边框的样式，宽度和颜色。</p>
-<h5 id="border-style边框样式">border-style边框样式</h5>
-<p>常用属性：dotted, dahed,solid,double<br>
-单独属性方式：<br>
-    border-top-style<br>
-    border-right-style<br>
-    border-bottom-style<br>
-    border-left-style</p>
-<h5 id="border-width">border-width</h5>
-<p>border-width规定了边框的宽度</p>
-<h5 id="border-color">border-color</h5>
-<p>边框颜色透明：border-color:transparent；<br>
-border:1px solid #eee;</p>
-<h3 id="外边距margin">外边距margin</h3>
-<p>margin属性接受任何长度单位，百分值，甚至负值。<br>
-有固定的的宽度块元素的水平居中，可以使用margin：*px auto的方式。</p>
-<h2 id="css浮动">CSS浮动</h2>
-<p>浮动元素取值：float:left/rigt/none<br>
-浮动元素适用于任何元素（行内元素，块元素）<br>
-浮动元素会默认水平排列，如果超出父元素的默认宽度，会自动跳转到下一行。<br>
-浮动元素会脱离文档流，显示方式为仅靠近父元素的左边缘，或者之前有浮动的元素的边缘位置<br>
-浮动的元素直接的父元素在 没有设置高度的情况下高度会丢失。</p>
-<h3 id="css清除浮动方法">CSS清除浮动方法</h3>
-<p>1.空标签清除浮动<br>
-   &lt; div style=&quot;clear:both;&quot;&gt;&lt; /div&gt;<br>
-2.利用伪类元素清除浮动<br>
-  after{ content:&quot;&quot;; display:block; clear:both}<br>
-3.触发父级元素BFC模式进行浮动的清除 overflow:hidden;</p>
 ]]></content>
     </entry>
 </feed>
