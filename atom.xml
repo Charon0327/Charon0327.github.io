@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-26T11:51:28.223Z</updated>
+    <updated>2021-02-26T12:04:20.872Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -37,7 +37,13 @@ flex- start默认的对齐方式，从第一个子元素开始对齐;<br>
 flex- end:从最后一个子元素开始对齐;<br>
 center:从中间位置对齐，平均分布<br>
 space-between：两端对齐<br>
-space-around：均分空白区域</li>
+space-around：均分空白区域<br>
+纵向对齐: align-items:<br>
+flex- start:从第一个元素开始对齐<br>
+flex- end:从最后一个元素开始对齐<br>
+center:从中间开始对齐<br>
+baseline :从元素的基线对齐<br>
+stretch:拉伸对齐</li>
 </ol>
 ]]></content>
     </entry>
