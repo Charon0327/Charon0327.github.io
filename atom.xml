@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-26T11:29:44.741Z</updated>
+    <updated>2021-02-26T11:51:28.223Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -10,6 +10,37 @@
     <logo>https://Charon0327.github.io/images/avatar.png</logo>
     <icon>https://Charon0327.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[弹性盒]]></title>
+        <id>https://Charon0327.github.io/post/dan-xing-he/</id>
+        <link href="https://Charon0327.github.io/post/dan-xing-he/">
+        </link>
+        <updated>2021-02-26T11:29:59.000Z</updated>
+        <content type="html"><![CDATA[<p>弹性盒就是自由伸缩的盒子<br>
+通常在移动端排版当中，适配屏幕是非常繁琐的事情，是因为各个终端屏幕和像素都不一样，弹性盒能够帮助我们快速适配各个不同的屏幕<br>
+弹性盒的主要属性:<br>
+弹性盒子的属性</p>
+<ol>
+<li>display:flex; //将当前元素变成弹性盒<br>
+inline-flex;<br>
+-webkit-flex ;<br>
+将盒子转化为弹性盒以后，那么盒子内的元素会默认排成一行;</li>
+<li>定义盒子内的元素的排列方向<br>
+flex-direction:<br>
+row:排成行，也是默认值;<br>
+row-reverse:以相反的方向排成一行;<br>
+column:排成列<br>
+column-reverse：以相反的方向排成一列</li>
+<li>定义盒子内的子元素的对齐方式<br>
+横向对齐: justify-content:<br>
+flex- start默认的对齐方式，从第一个子元素开始对齐;<br>
+flex- end:从最后一个子元素开始对齐;<br>
+center:从中间位置对齐，平均分布<br>
+space-between：两端对齐<br>
+space-around：均分空白区域</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSS中的属性应用(2)]]></title>
         <id>https://Charon0327.github.io/post/css-zhong-de-shu-xing-ying-yong-2/</id>
@@ -529,78 +560,6 @@ IE8以及更早的版本使用滤镜filter:alpha(opacity=x)。x能够取的值�
 </ul>
 </li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSS定位]]></title>
-        <id>https://Charon0327.github.io/post/css-ding-wei/</id>
-        <link href="https://Charon0327.github.io/post/css-ding-wei/">
-        </link>
-        <updated>2021-02-18T03:12:01.000Z</updated>
-        <content type="html"><![CDATA[<p>CSS有三种基本的定位机制：普通流，浮动和绝对定位。</p>
-<h3 id="css定位position属性实现定位">CSS定位/position属性实现定位</h3>
-<p>通过使用position属性，可以选择四种不同类型的定位，这会影响元素框生成的方式。<br>
-    position：static  静止定位，元素默认状态<br>
-    position：absolute  绝对定位，相对于最近的有定位的父元素进行定位<br>
-    position：relative  相对定位，相对于自己原来位置进行定位<br>
-    position：fixed  固定定位，相对于浏览器可视窗口进行定位</p>
-<h5 id="position-absolute">position-absolute</h5>
-<p>元素相对于最近的，有定位的父级元素定位，如果其父级元素都无定位属性,则相对于body定位。元素脱离文档流(从文档流中删除) , 原本所占空间不保留。元素定位后生成一个行内块级盒子。绝对定位的框可以从它的包含块向上、右、下、 左移动。绝对定位的框脱离普通流，所以它可以覆盖页面上的其他元素，可以通过设置Z-index属性来控制这些框的堆放次序。</p>
-<h5 id="position-relative">position-relative</h5>
-<p>相对定位被看作普通流定位模型的一部分，定位元素的位置相对于它在普通流中的位置进行移动。使用相对定位的元素不管它是否进行移动，元素仍要占据它原来的位置。移动元素会导致它覆盖其他的框。</p>
-<h5 id="position-fixed">position-fixed</h5>
-<p>固定定位相对于浏览器可视窗口进行定位，其他表现类似于absolute绝对定位表现。</p>
-<h3 id="css定位z-index">CSS定位/z-index</h3>
-<p>z-index属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br>
-    相同的定位元素，结构后面的元素在重叠的情况下会默认覆盖结构之前的定位元素。<br>
-    元素可拥有负的z-index属性值。<br>
-    Z-index 仅能在定位元素上奏效(例如position:absolute/fixed/relative; 通过调节z-index值的大小来改变)</p>
-<h3 id="css定位元素垂直居中">CSS定位/元素垂直居中</h3>
-<p>利用position定位可实现元素的垂直居中<br>
-    父元素需要有定位( poisition:absolute/relative/fixed );<br>
-    垂直居中元素进行绝对定位position : absolute<br>
-    top:50%; left:50%; margin-left: 元素宽度margin-top: -元素宽度;</p>
-<h3 id="css溢出overflow">CSS溢出overflow</h3>
-<p>当一个元素固定为某个特定大小，但内容在元素中放不下F。此时就可以利用overflow属性米控制这种情况<br>
-    值: visible | hidden | scroll | auto I inherit<br>
-    初始值; vislble<br>
-    应用于:块级元素，特换元素，表单元格<br>
-overflow-x主要用来定义对水平方向内容溢出的剪切，而overflow-y主要用来定义对垂直方向内容溢出的剪切。<br>
-注意如果:overflow-x和overflow-y相同则等同于overflow，如果overflow-x和overflow-y值不同，且其中一个值显式设置为visible或末设置默认为visible ，而另外一个值是非visible的值，则visible 会被重置为auto。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">visible</td>
-<td style="text-align:center">元素的内容在元素框之外也可见</td>
-</tr>
-<tr>
-<td style="text-align:center">auto</td>
-<td style="text-align:center">如果内容被裁减，则浏览器会显示滚动条以便查看其余的内容</td>
-</tr>
-<tr>
-<td style="text-align:center">scroll</td>
-<td style="text-align:center">元素的内容会在元素框的边界处裁减，但浏览器会显示滚动条以便查看其余的内容</td>
-</tr>
-<tr>
-<td style="text-align:center">hidden</td>
-<td style="text-align:center">元素的内容会在元素框的边界处裁减，并且超出裁减区域的内容不可见</td>
-</tr>
-</tbody>
-</table>
-<h4 id="css-文本溢出省略号代替单行文本">CSS -文本溢出省略号代替(单行文本)</h4>
-<p>overflow : hidden; //超出隐藏<br>
-text- oveflellisis // 文本超出省略号代替<br>
-white-space:nowrap; // 禁止文字自动换行</p>
-<h3 id="css-margin产生问题">CSS -margin产生问题</h3>
-<p>垂直方向auto值失效( 定位实现垂直居中)<br>
-父元素设置margin- top时,内部的第一个子元素margin-top失效( padding代替,为父元素加边框)<br>
-上下双边距合并(统一设置垂直边距)</p>
 ]]></content>
     </entry>
 </feed>
