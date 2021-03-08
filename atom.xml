@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-26T12:04:20.872Z</updated>
+    <updated>2021-03-08T14:53:27.326Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -11,15 +11,45 @@
     <icon>https://Charon0327.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
+        <title type="html"><![CDATA[移动端布局要素]]></title>
+        <id>https://Charon0327.github.io/post/yi-dong-duan-bu-ju-yao-su/</id>
+        <link href="https://Charon0327.github.io/post/yi-dong-duan-bu-ju-yao-su/">
+        </link>
+        <updated>2021-03-08T14:15:39.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="meta标签">meta标签</h1>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-
+scale=1.0,minimum-scale=1.0,user-scaleable=no&quot;&gt;
+</code></pre>
+<p>名字是<code>viewport</code>，内容是：<br>
+width=device-width:我们页面的宽高是 viewport的宽高，也就是我们设备的宽高<br>
+initial-scale=1.0:默认的缩放比例是1:1<br>
+maximum-scale=1.0：允许用户缩放的最大比例是1.0<br>
+minimum-scale=1.0：允许用户缩放的最小比例是1.0<br>
+user-scaleable=no：不允许用户手动缩放</p>
+<pre><code>meta name=&quot;format-detection&quot; content=&quot;telephone=no,email=no&quot;
+</code></pre>
+<p>不要自动识别手机号和邮箱地址，属于iPhone适配的meta</p>
+<pre><code>&lt;meta name=&quot;apple-mobile-app-capable&quot; content=&quot;yes&quot;&gt;
+</code></pre>
+<p>网站开启对webapp的支持，m站→移动端浏览器的网站</p>
+<pre><code>&lt;meta name=&quot;app-mobile-app-status-bar-style&quot; content=&quot;black&quot;&gt;
+</code></pre>
+<p>改变苹果浏览器顶部状态条的颜色，将它设置为黑色，有白色和灰色</p>
+<pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+</code></pre>
+<p>默认使用ie的最新版本浏览器以及Chrome浏览器</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[弹性盒]]></title>
         <id>https://Charon0327.github.io/post/dan-xing-he/</id>
         <link href="https://Charon0327.github.io/post/dan-xing-he/">
         </link>
         <updated>2021-02-26T11:29:59.000Z</updated>
         <content type="html"><![CDATA[<p>弹性盒就是自由伸缩的盒子<br>
-通常在移动端排版当中，适配屏幕是非常繁琐的事情，是因为各个终端屏幕和像素都不一样，弹性盒能够帮助我们快速适配各个不同的屏幕<br>
-弹性盒的主要属性:<br>
-弹性盒子的属性</p>
+通常在移动端排版当中，适配屏幕是非常繁琐的事情，是因为各个终端屏幕和像素都不一样，弹性盒能够帮助我们快速适配各个不同的屏幕</p>
+<h3 id="弹性盒的主要属性">弹性盒的主要属性:</h3>
+<h4 id="弹性盒子的属性">弹性盒子的属性</h4>
 <ol>
 <li>display:flex; //将当前元素变成弹性盒<br>
 inline-flex;<br>
@@ -39,11 +69,45 @@ center:从中间位置对齐，平均分布<br>
 space-between：两端对齐<br>
 space-around：均分空白区域<br>
 纵向对齐: align-items:<br>
-flex- start:从第一个元素开始对齐<br>
-flex- end:从最后一个元素开始对齐<br>
+flex- start:从第一个元素开始对齐，第一个子元素排列在父元素起始位置<br>
+flex- end:从最后一个元素开始对齐，最后一个子元素排列在父元素结束位置<br>
 center:从中间开始对齐<br>
 baseline :从元素的基线对齐<br>
 stretch:拉伸对齐</li>
+<li>规定子元素在父元素内是否换行<br>
+flex-wrap：<br>
+nowrap：不换行，一行显示，所以有可能溢出，默认值<br>
+wrap：换行显示<br>
+wrap-reverse：换行，但是以相反的顺序来排序<br>
+initial：设置属性值为该属性的默认值<br>
+inherit：继承父元素的属性值</li>
+<li>设置行的行为<br>
+align-content :<br>
+flex-start:项目位于父元素的开头<br>
+flex-end:项目位于父元素的末尾<br>
+center:项目位于父元素的中心<br>
+space-between:项目位于父元素的两端，中间留有空白<br>
+space-around :均分父元素的空白区域<br>
+stretch:默认值，项目被拉伸来适应父元素</li>
+</ol>
+<h4 id="弹性盒内的子元素的属性">弹性盒内的子元素的属性</h4>
+<ol>
+<li>margin值<br>
+居中的效果: margin: auto;<br>
+等同于给父元素添加横向纵向都居中对齐</li>
+<li>order:规定子元素的显示顺序<br>
+order:<br>
+默认值是0，负数向前，正数向后排列，<br>
+如果同时添加多个order,那么数字小的排列在前面</li>
+<li>flex:规定子元素所占据的空间<br>
+flex:1,2,3,</li>
+<li>align-self:覆盖父元素的align- items属性;<br>
+auto:默认值，继承父元素的属性，如果父元素没有设置该属性，则为stretch;<br>
+stretch:元素被拉伸以适应父元素<br>
+center:元素位于父元素的中心<br>
+flex-start :元素位于父元素的开始位置<br>
+flex-end:元素位于父元素的额结束位置<br>
+baseline:元素位于父元素的基线上</li>
 </ol>
 ]]></content>
     </entry>
@@ -489,83 +553,6 @@ E为底部块,</p>
     ➢inherit :应该从父元素继承opacity属性的值。<br>
 IE8以及更早的版本使用滤镜filter:alpha(opacity=x)。x能够取的值从0到100。值<br>
 越小，越透明。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[浏览器兼容CSS hack]]></title>
-        <id>https://Charon0327.github.io/post/liu-lan-qi-jian-rong-css-hack/</id>
-        <link href="https://Charon0327.github.io/post/liu-lan-qi-jian-rong-css-hack/">
-        </link>
-        <updated>2021-02-19T02:41:42.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="css-hack分类">CSS hack分类</h3>
-<p>CSS Hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以及条件注释法(即HTML头部引用if IE ) Hack，实际项目中CSS Hack大部分是针对IE浏览器不同版本之间的表现差异而引入的。<br>
-      属性前缀法(即类内部Hack):例如IE6能识别下划线&quot;_&quot;和星号&quot;*&quot;，IE7能识别星号&quot;*&quot;，但不能识别下划线&quot;_&quot;，IE6~IE10都认识&quot;\9&quot;，但firefox前述三个都不能认识。<br>
-      选择器前缀法(即选择器Hack):例如IE6能识别*html .class{}, IE7能识别*+html .class{}或者* :first-child+html .class{}。<br>
-      IE条件注释法(即HTML条件注释Hack):针对所有IE(注: IE10+已经 不再支持条件注释): &lt;!- -[if IE]&gt;IE浏览器显示的内容&lt; ![endif]--&gt;,针对IE6及以下版不: &lt;!- -[if It IE 6]&gt;只在IE6-显示的内容&lt;![endif]--&gt;. 这类Hack不仅对CSS生效， 对写在判断语句里面的所有代码都会生效。</p>
-<ol>
-<li>CSS hack方式一：条件注释法：<br>
-这种方式是IE浏览器转有的Hack方式。
-<ul>
-<li>只在IE下生效</li>
-</ul>
-<pre><code>&lt;!--[if IE]&gt;
-	这段文字只在IE浏览器中显示
-&lt;![endif]--&gt;
-</code></pre>
-<ul>
-<li>只在IE6下生效</li>
-</ul>
-<pre><code>&lt;!--[if IE 6]&gt;
-	这段文字只在IE6浏览器中显示
-&lt;![endif]--&gt;
-</code></pre>
-<ul>
-<li>只在IE6以上版本生效</li>
-</ul>
-<pre><code>&lt;!--[if gte IE 6]&gt;
-	这段文字只在IE6以上(包括)版本浏览器中显示
-&lt;![endif]--&gt;
-</code></pre>
-<ul>
-<li>只在IE8上不生效</li>
-</ul>
-<pre><code>&lt;!--[if ！IE 8]&gt;
-	这段文字在非IE8浏览器中显示
-&lt;![endif]--&gt;
-</code></pre>
-<ul>
-<li>非IE浏览器生效</li>
-</ul>
-<pre><code>&lt;!--[if ！IE]&gt;
-	这段文字在非IE浏览器中显示
-&lt;![endif]--&gt;
-</code></pre>
-</li>
-<li>CSS hack方式二:类内属性前缀法<br>
-属性前缀法是在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果。
-<ul>
-<li>&quot;\9”IE6/IE7/IE8/IE9/IE10都生效<br>
-<code>background-color: red\9;</code></li>
-<li>&quot;\0”IE8/IE9/IE10都生效，是IE8/9/ 10的hack</li>
-<li>&quot;\9\0&quot; 只对IE9/IE10生效，是IE9/10的hack</li>
-<li>“减号是IE6专有的hack</li>
-<li>+ IE7识别的hack方法</li>
-</ul>
-</li>
-<li>CSS hack方式三:选择器前缀法<br>
-选择器前缀法是针对一些页面表现不一致或者 需要特殊对待的浏览器,在CSS选择器前<br>
-加上一些只有某些特定浏览器才能识别的前缀进行hack。<br>
-   * + html *+前缀只对E7生效
-<ul>
-<li>@media screen\9{...}只对IE6/7生效</li>
-<li>@media \Oscreen {body { background: red; }}只对IE8有效</li>
-<li>@media \Oscreen,screen\9{body { background: blue; }只对IE6/7/8有效</li>
-<li>@media screen\0 {body { background: green; }}只对IE8/9/10有效</li>
-<li>@media screen and (min-width:0\0) {body { background: gray; }}只对IE9/10有效</li>
-<li>@media screen and (-ms-high-contrast: active), (-ms-high contrast: none) {body { background: orange; }}只对E10有效</li>
-</ul>
-</li>
-</ol>
 ]]></content>
     </entry>
 </feed>

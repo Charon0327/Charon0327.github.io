@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>弹性盒 | Gridea</title>
-<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1614341054935">
+<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1615215194287">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="弹性盒 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
@@ -26,7 +26,7 @@ display:flex; //将当前元素变成弹性盒..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://Charon0327.github.io">
-  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1614341054935" alt="">
+  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1615215194287" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -86,7 +86,7 @@ display:flex; //将当前元素变成弹性盒..." />
                 2021-02-26
               </span>
               <span>
-                2 min read
+                3 min read
               </span>
               
             </div>
@@ -94,9 +94,9 @@ display:flex; //将当前元素变成弹性盒..." />
             <div class="post-content-wrapper">
               <div class="post-content">
                 <p>弹性盒就是自由伸缩的盒子<br>
-通常在移动端排版当中，适配屏幕是非常繁琐的事情，是因为各个终端屏幕和像素都不一样，弹性盒能够帮助我们快速适配各个不同的屏幕<br>
-弹性盒的主要属性:<br>
-弹性盒子的属性</p>
+通常在移动端排版当中，适配屏幕是非常繁琐的事情，是因为各个终端屏幕和像素都不一样，弹性盒能够帮助我们快速适配各个不同的屏幕</p>
+<h3 id="弹性盒的主要属性">弹性盒的主要属性:</h3>
+<h4 id="弹性盒子的属性">弹性盒子的属性</h4>
 <ol>
 <li>display:flex; //将当前元素变成弹性盒<br>
 inline-flex;<br>
@@ -116,16 +116,66 @@ center:从中间位置对齐，平均分布<br>
 space-between：两端对齐<br>
 space-around：均分空白区域<br>
 纵向对齐: align-items:<br>
-flex- start:从第一个元素开始对齐<br>
-flex- end:从最后一个元素开始对齐<br>
+flex- start:从第一个元素开始对齐，第一个子元素排列在父元素起始位置<br>
+flex- end:从最后一个元素开始对齐，最后一个子元素排列在父元素结束位置<br>
 center:从中间开始对齐<br>
 baseline :从元素的基线对齐<br>
 stretch:拉伸对齐</li>
+<li>规定子元素在父元素内是否换行<br>
+flex-wrap：<br>
+nowrap：不换行，一行显示，所以有可能溢出，默认值<br>
+wrap：换行显示<br>
+wrap-reverse：换行，但是以相反的顺序来排序<br>
+initial：设置属性值为该属性的默认值<br>
+inherit：继承父元素的属性值</li>
+<li>设置行的行为<br>
+align-content :<br>
+flex-start:项目位于父元素的开头<br>
+flex-end:项目位于父元素的末尾<br>
+center:项目位于父元素的中心<br>
+space-between:项目位于父元素的两端，中间留有空白<br>
+space-around :均分父元素的空白区域<br>
+stretch:默认值，项目被拉伸来适应父元素</li>
+</ol>
+<h4 id="弹性盒内的子元素的属性">弹性盒内的子元素的属性</h4>
+<ol>
+<li>margin值<br>
+居中的效果: margin: auto;<br>
+等同于给父元素添加横向纵向都居中对齐</li>
+<li>order:规定子元素的显示顺序<br>
+order:<br>
+默认值是0，负数向前，正数向后排列，<br>
+如果同时添加多个order,那么数字小的排列在前面</li>
+<li>flex:规定子元素所占据的空间<br>
+flex:1,2,3,</li>
+<li>align-self:覆盖父元素的align- items属性;<br>
+auto:默认值，继承父元素的属性，如果父元素没有设置该属性，则为stretch;<br>
+stretch:元素被拉伸以适应父元素<br>
+center:元素位于父元素的中心<br>
+flex-start :元素位于父元素的开始位置<br>
+flex-end:元素位于父元素的额结束位置<br>
+baseline:元素位于父元素的基线上</li>
 </ol>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%BC%B9%E6%80%A7%E7%9B%92%E7%9A%84%E4%B8%BB%E8%A6%81%E5%B1%9E%E6%80%A7">弹性盒的主要属性:</a>
+<ul>
+<li><a href="#%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E7%9A%84%E5%B1%9E%E6%80%A7">弹性盒子的属性</a></li>
+<li><a href="#%E5%BC%B9%E6%80%A7%E7%9B%92%E5%86%85%E7%9A%84%E5%AD%90%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7">弹性盒内的子元素的属性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
