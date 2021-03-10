@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Charon0327.github.io</id>
     <title>Gridea</title>
-    <updated>2021-03-10T08:08:07.520Z</updated>
+    <updated>2021-03-10T09:32:57.787Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Charon0327.github.io"/>
     <link rel="self" href="https://Charon0327.github.io/atom.xml"/>
@@ -91,6 +91,15 @@ em：单位<br>
 &lt;/select&gt;
 </code></pre>
 <p>**em计算 是根据该元素的font-size实现的；该元素的font-size有可能是显示设置的，也可能是通过继承得来的 **</p>
+<h1 id="rem">rem</h1>
+<p>em:相对于元素自身的font-size进行计算的<br>
+rem:root  element(html)  根据根元素的字体大小进行计算，具有统一的计算标准。<br>
+浏览器默认字体16px；625%就是100px；所以1rem=100px</p>
+<pre><code>html{
+    font-size:625%
+}
+</code></pre>
+<p>既能让我们的rem计算方便，又能让浏览器支持，还能和用户自己设置的字体大小产生关联</p>
 ]]></content>
     </entry>
     <entry>
