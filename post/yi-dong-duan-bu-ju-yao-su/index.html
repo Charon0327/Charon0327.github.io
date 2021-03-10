@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>移动端布局要素 | Gridea</title>
-<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1615275054190">
+<link rel="shortcut icon" href="https://Charon0327.github.io/favicon.ico?v=1615363679637">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Charon0327.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="移动端布局要素 | Gridea - Atom Feed" href="https://Charon0327.github.io/atom.xml">
@@ -23,7 +23,7 @@ scale=1.0,minimum-..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://Charon0327.github.io">
-  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1615275054190" alt="">
+  <img class="avatar" src="https://Charon0327.github.io/images/avatar.png?v=1615363679637" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -83,7 +83,7 @@ scale=1.0,minimum-..." />
                 2021-03-08
               </span>
               <span>
-                2 min read
+                4 min read
               </span>
               
             </div>
@@ -112,11 +112,69 @@ user-scaleable=no：不允许用户手动缩放</p>
 <pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
 </code></pre>
 <p>默认使用ie的最新版本浏览器以及Chrome浏览器</p>
+<h1 id="媒体查询">媒体查询</h1>
+<p>@media经常用来实现响应式布局</p>
+<pre><code>@media 查询类型 and | not|only(查询条件){
+        code...
+}
+@media 查询类型 and | not|only(查询条件){
+        code...
+}
+@media 查询类型 and | not|only(查询条件){
+        code...
+}
+.......
+</code></pre>
+<h4 id="屏幕取值的判断"><strong>屏幕取值的判断</strong></h4>
+<pre><code>@media(min-width:768px){
+    &lt;!-- &gt;=768px的设备 --&gt;
+}
+@media(min-width:992px){
+     &lt;!-- &gt;=992px的设备 --&gt;
+}
+@media(min-width:1200px){
+     &lt;!-- &gt;=1200px的设备 --&gt;
+}
+</code></pre>
+<p><strong>注意：顺序，如果你采用的是min-width的判断方法，那么屏幕的宽度是从小到大的。如果采用的是max-width的判断方法，那么屏幕的宽度是从大到小的</strong><br>
+比如说你的屏幕是1440px，</p>
+<pre><code>@media(max-width:1199pxx){
+    &lt;!-- &lt;=1200px的设备 --&gt;
+}
+@media(max-width:991px){
+     &lt;!-- &lt;=992px的设备 --&gt;
+}
+@media(max-width:767px){
+     &lt;!-- &lt;=768px的设备 --&gt;
+}
+</code></pre>
+<h1 id="em和rem">em和rem</h1>
+<p>浏览器的单位：px；em；rem;<br>
+px：像素，不能实现自适应<br>
+em：单位<br>
+  默认情况下，1em=16px,因为浏览器默认字体大小是16px<br>
+  正常在使用em的时候，如果给body设置了font-size：62.5%，需要注意给元素添加字号，使用元素的字号来判断该元素的大小等属性<br>
+  如果给body设置了font-size：100px，会导致用户自己设置的字体大小不再产生作用，相当于影响了用户的自身体验。<br>
+什么时候需要使用em?<br>
+简单组件内部使用</p>
+<pre><code>&lt;select name=&quot;&quot; id=&quot;&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+     &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+       &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<p>**em计算 是根据该元素的font-size实现的；该元素的font-size有可能是显示设置的，也可能是通过继承得来的 **</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li><a href="#meta%E6%A0%87%E7%AD%BE">meta标签</a></li>
+<li><a href="#%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2">媒体查询</a><br>
+*<br>
+*<br>
+* <a href="#%E5%B1%8F%E5%B9%95%E5%8F%96%E5%80%BC%E7%9A%84%E5%88%A4%E6%96%AD"><strong>屏幕取值的判断</strong></a></li>
+<li><a href="#em%E5%92%8Crem">em和rem</a></li>
 </ul>
 
               </div>
